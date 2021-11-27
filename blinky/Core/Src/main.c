@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "blink.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -93,14 +93,7 @@ int main(void)
   uint32_t delay = 0;
   while (1)
   {    
-    HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_12);
-    HAL_Delay(delay+20);
-    HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_13);
-    HAL_Delay(delay+20);
-    HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_14);
-    HAL_Delay(delay+20);
-    HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_15);
-    HAL_Delay(delay+20);
+    blink(delay+20);
     delay = (delay + 10) % 100;
     /* USER CODE END WHILE */
 
