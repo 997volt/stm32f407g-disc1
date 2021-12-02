@@ -3,5 +3,6 @@ Middlewares/*
 USB_DEVICE/*
 
 build/*
+test/testenv/*
 
 .mxproject
